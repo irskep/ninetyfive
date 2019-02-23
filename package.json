@@ -1,0 +1,10 @@
+{
+  "name": "ninetyfive",
+  "version": "1.0.0",
+  "description": "React.js components for a faithful Windows 95 aesthetic",
+  "main": "index.js",
+  "repository": "https://github.com/irskep/ninetyfive",
+  "author": "Steve Landey <steve@steveasleep.com>",
+  "license": "MIT",
+  "private": false
+}
