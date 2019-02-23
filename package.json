@@ -9,8 +9,13 @@
   "private": false,
   "source": "./src/index.js",
   "scripts": {
-    "build": "parcel build src/index.js"
+    "build": "parcel build --no-minify src/index.js"
   },
+  "files": [
+    "dist/index.js",
+    "dist/index.css",
+    "dist/index.js.map"
+  ],
   "devDependencies": {
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.11.0"
