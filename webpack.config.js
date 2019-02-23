@@ -1,5 +1,4 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/lib/index.js'),
@@ -9,7 +8,9 @@ module.exports = {
     library: '',
     libraryTarget: 'commonjs'
   },
-  externals: [nodeExternals()],
+  optimization: {
+		minimize: false,
+	},
   module: {
     rules: [
       {
@@ -17,7 +18,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-react'],
         }
       },
       {
@@ -26,7 +27,7 @@ module.exports = {
           'style-loader',
           'css-loader',
           'sass-loader',
-        ]
+        ],
       }
     ]
   }
