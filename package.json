@@ -9,7 +9,7 @@
   "private": false,
   "source": "./src/index.js",
   "scripts": {
-    "build": "parcel build --no-minify src/index.js"
+    "build": "parcel build --target=node --no-minify src/index.js"
   },
   "files": [
     "dist/index.js",
