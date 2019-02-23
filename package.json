@@ -1,10 +1,23 @@
 {
   "name": "ninetyfive",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "React.js components for a faithful Windows 95 aesthetic",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/irskep/ninetyfive",
   "author": "Steve Landey <steve@steveasleep.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "source": "./src/index.js",
+  "scripts": {
+    "build": "microbundle --jsx",
+    "dev": "microbundle watch --jsx"
+  },
+  "devDependencies": {
+    "microbundle": "^0.10.1",
+    "node-sass": "^4.11.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
 }
