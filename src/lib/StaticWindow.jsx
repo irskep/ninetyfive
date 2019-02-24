@@ -1,5 +1,4 @@
 import React from 'react';
-import ___ from "./ui.scss";
 
 export default function StaticWindow({title, children, windowStyle, titleExtra, margin, style}) {
   style = margin

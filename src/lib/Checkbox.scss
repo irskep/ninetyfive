@@ -1,0 +1,38 @@
+@import "common";
+
+.W95__Checkbox {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+  cursor: pointer;
+
+  .W95__Checkbox__Box {
+    @include BorderedControl;
+
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    position: relative;
+    margin-right: 6px;
+    transform: translate(0, 4px);
+    cursor: pointer;
+
+    input {
+      visibility: hidden;
+    }
+  }
+
+  .W95__ControlBG {
+    cursor: pointer;
+  }
+
+  svg {
+    display: block;
+    transform: translate(1px, 0);
+  }
+
+  label {
+    user-select: none;
+    cursor: pointer;
+  }
+}

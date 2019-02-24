@@ -1,0 +1,35 @@
+@import "common";
+
+.W95__List {
+  @include BorderedControl;
+
+  .W95__List__Contents {
+    margin: 2px;
+  }
+
+  .W95__ListItem {
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 4px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &:hover {
+      padding-left: 2px;
+      line-height: 36px;
+      @include dotted-border;
+    }
+
+    &.m-selected {
+      background-color: var(--blue);
+      color: var(--white);
+
+      &:hover {
+        border: 2px dotted yellow;
+        padding-left: 2px;
+        line-height: 36px;
+      }
+    }
+  }
+}

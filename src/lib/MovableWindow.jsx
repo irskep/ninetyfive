@@ -1,5 +1,4 @@
 import React from 'react';
-import ___ from "./ui.scss";
 
 function doublePoints(points) {
   points.forEach((p, i) => {
@@ -92,17 +91,17 @@ export default class MovableWindow extends React.Component {
             <div className="W95__WindowBG" />
             <div className="W95__WindowTitle" onMouseDown={this.onMouseDown.bind(this)}>
               {title}
+              {canClose && <div className="W95__TinyButton" onClick={onClose}>
+                <div className="W95__ButtonBG" />
+                <svg
+                    width="16" height="16" viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink">
+                  <polygon points={points1.map((pts) => pts.join(',')).join(' ')} fill="black" stroke="none" />
+                  <polygon points={points2.map((pts) => pts.join(',')).join(' ')} fill="black" stroke="none" />
+                </svg>
+              </div>}
             </div>
-            {canClose && <div className="W95__WindowCloseButton" onClick={onClose}>
-              <div className="W95__ButtonBG" />
-              <svg
-                  width="16" height="16" viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink">
-                <polygon points={points1.map((pts) => pts.join(',')).join(' ')} fill="black" stroke="none" />
-                <polygon points={points2.map((pts) => pts.join(',')).join(' ')} fill="black" stroke="none" />
-              </svg>
-            </div>}
             <div className="W95__WindowContents">
               {children}
             </div>

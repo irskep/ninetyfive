@@ -1,5 +1,4 @@
 import React from 'react';
-import ___ from "./ui.scss";
 
 export default function TinyButton({style, className, children, onClick}) {
   return (

@@ -1,0 +1,21 @@
+@import "common";
+
+.W95__TextInput {
+  @include BorderedControl;
+
+  display: inline-block;
+
+  input[type=text] {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 6px;
+    border: none;
+    max-width: 100%;
+    font: inherit;
+    font-size: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

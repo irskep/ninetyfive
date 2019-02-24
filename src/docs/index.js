@@ -12,6 +12,13 @@ import {
   TinyButton,
 } from '../lib';
 
+const curryOne = (fn, arg) => () => fn(arg);
+const oneArg = (fn) => (arg) => fn(arg);
+
+function Section({children}) {
+  return <div style={{marginBottom: '1rem'}}>{children}</div>;
+}
+
 function App() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
@@ -27,11 +34,9 @@ function App() {
       <StaticWindow
           margin={16}
           style={{maxWidth: '40rem'}}
-          title="NinetyFive UI Library"
+          title="Ninetyfive UI Library"
           titleExtra={(
-            <TinyButton key="button" style={{float: 'right'}} onClick={setIsAboutOpen.bind(this, true)}>
-              ?
-            </TinyButton>
+            <TinyButton key="button" onClick={curryOne(setIsAboutOpen, true)}>?</TinyButton>
           )}>
         <div className="W95__HorzFlex" key="top">
           <Group title="What is this?">
@@ -45,22 +50,22 @@ function App() {
           </Group>
         </div>
 
-        <p>
+        <Section>
           <Button onClick={() => alert("Button clicked")}>A button</Button>
-        </p>
+        </Section>
 
-        <p>
+        <Section>
           <Checkbox
             label={"A checkbox"}
-            onChange={setCheckboxValue.bind(this, !checkboxValue)}
+            onChange={curryOne(setCheckboxValue, !checkboxValue)}
             checked={checkboxValue} />
-        </p>
+        </Section>
 
-        <p>
+        <Section>
           A text field: <TextInput value={textValue} onChange={onTextInputChanged} />
-        </p>
+        </Section>
 
-        <p>
+        <Section>
           <ScrollingText style={{height: 84}}>
             Scrollable text box<br />
             Scrollable text box<br />
@@ -69,12 +74,14 @@ function App() {
             Scrollable text box<br />
             Scrollable text box<br />
           </ScrollingText>
-        </p>
+        </Section>
 
-        <List
-          items={items}
-          selectedItemIndex={selectedItemIndex}
-          onSelect={onSelect} />
+        <Section>
+          <List
+            items={items}
+            selectedItemIndex={selectedItemIndex}
+            onSelect={oneArg(onSelect)} />
+        </Section>
       </StaticWindow>
 
       <MovableWindow
@@ -87,7 +94,7 @@ function App() {
             maxHeight: '100%',
           }}
           canClose={true}
-          onClose={setIsAboutOpen.bind(this, false)}>
+          onClose={curryOne(setIsAboutOpen, false)}>
         <ScrollingText className="m-fill-container">You can drag this window around!</ScrollingText>
       </MovableWindow>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import ___ from "./ui.scss";
 
 export default function Button(props) {
   return (

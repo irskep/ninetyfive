@@ -1,0 +1,36 @@
+@import "common";
+
+.W95__Group {
+  position: relative;
+
+  border: 2px solid #808080;
+
+  margin: $contentPadding 0;
+
+  .W95__GroupBG {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -4px;
+    right: -4px;
+    border: 2px solid #fff;
+  }
+
+  .W95__GroupTitle {
+    position: absolute;
+    background-color: var(--bg);
+    top: -0.7em;
+    left: $contentPadding - $windowPadding * 2;
+    padding: 0 $windowPadding * 2;
+
+    max-width: calc(100% - 16px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .W95__GroupContents {
+    padding: $contentPadding + $windowPadding $contentPadding 0 $contentPadding;
+  }
+}

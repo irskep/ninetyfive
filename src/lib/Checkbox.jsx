@@ -1,5 +1,4 @@
 import React from 'react';
-import ___ from "./ui.scss";
 
 const points = [
   [1,3],

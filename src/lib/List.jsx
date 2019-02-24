@@ -1,5 +1,4 @@
 import React from 'react';
-import ___ from "./ui.scss";
 
 export default function List({items, selectedItemIndex, onSelect}) {
   return (

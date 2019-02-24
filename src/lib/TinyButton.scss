@@ -1,0 +1,15 @@
+@import "common";
+
+.W95__TinyButton {
+  @include ButtonLike;
+
+  margin: 6px;
+  width: 30px;
+  line-height: 22px;
+  height: 26px;
+  text-align: center;
+
+  svg {
+    transform: translate(0, 3px);
+  }
+}

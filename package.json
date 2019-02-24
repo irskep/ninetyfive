@@ -11,7 +11,7 @@
   "scripts": {
     "start": "npx parcel src/docs/index.html",
     "build": "npx webpack --mode=production",
-    "build:docs": "parcel build src/docs/index.html -d ./dist/docs"
+    "build:docs": "parcel build --detailed-report src/docs/index.html -d ./dist/docs"
   },
   "files": [
     "dist/index.js",
@@ -29,6 +29,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
+    "cssnano": "^4.1.10",
     "node-sass": "^4.11.0",
     "react": "^16.0.0",
     "sass-loader": "^7.1.0",
