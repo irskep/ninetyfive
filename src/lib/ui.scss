@@ -3,10 +3,17 @@ $windowPadding: 2px;
 $contentPadding: 12px;
 
 // Global styles
-.W95__Window {
+.W95__Window, .W95__Desktop {
   &, *, *::before, *::after {
     box-sizing: border-box;
   }
+
+  --bg: #c0c0c0;
+  --fg: #000;
+  --blue: #000082;
+  --white: #fff;
+  --clickable: #040080;
+  --desktop: #59aaa9;
 
   font-family: Arial, Helvetica, sans-serif;
 
@@ -27,12 +34,13 @@ $contentPadding: 12px;
 
 // Components
 
+.W95__Desktop {
+  background-color: var(--desktop);
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
 .W95__Window {
-  --bg: #c0c0c0;
-  --fg: #000;
-  --blue: #000082;
-  --white: #fff;
-  --clickable: #040080;
 
   background-color: var(--bg);
   color: var(--fg);
@@ -43,6 +51,7 @@ $contentPadding: 12px;
   &.m-static {
     position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
   }
 
   &.m-movable {
@@ -351,12 +360,12 @@ $contentPadding: 12px;
     text-align: center;
   }
 
-  .W95__ScrollingText__Content {
+  &.m-fill-container {
+    position: absolute;
+    top: 2px; right: 2px; bottom: 2px; left: 2px;
+  }
 
-    &.m-fill-container {
-      position: absolute;
-      top: 2px; right: 2px; bottom: 2px; left: 2px;
-    }
+  .W95__ScrollingText__Content {
     padding: $windowPadding * 2;
     overflow: scroll;
 

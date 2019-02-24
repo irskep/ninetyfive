@@ -15,7 +15,7 @@ import {
 function App() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
-  const items = ['item 1', 'item 2', 'item 3'];
+  const items = ['List item 1', 'List item 2', 'List item 3'];
   const [selectedItemIndex, onSelect] = useState(null);
   const [checkboxValue, setCheckboxValue] = useState(true);
   const [textValue, onChangeText] = useState('');
@@ -23,8 +23,10 @@ function App() {
   const onTextInputChanged = (e) => onChangeText(e.target.value);
 
   return (
-    <div>
+    <div className="W95__Desktop">
       <StaticWindow
+          margin={16}
+          style={{maxWidth: '40rem'}}
           title="NinetyFive UI Library"
           titleExtra={(
             <TinyButton key="button" style={{float: 'right'}} onClick={setIsAboutOpen.bind(this, true)}>
@@ -32,16 +34,19 @@ function App() {
             </TinyButton>
           )}>
         <div className="W95__HorzFlex" key="top">
-          <Group title="Star System Info">
-          <p>ABCD</p>
-          </Group>
-          <Group title="Seed">
-          ABCD
+          <Group title="What is this?">
+            <p>
+              Ninetyfive is a collection of React.js components that make a web page look like a Windows 95 program.
+            </p>
+
+            <p>
+              Don't forget to press the "?" button!
+            </p>
           </Group>
         </div>
 
         <p>
-          <Button>Hello</Button>
+          <Button>A button</Button>
         </p>
 
         <p>
@@ -52,12 +57,12 @@ function App() {
         </p>
 
         <p>
-          <TextInput value={textValue} onChange={onTextInputChanged} />
+          A text field: <TextInput value={textValue} onChange={onTextInputChanged} />
         </p>
 
         <p>
           <ScrollingText>
-            Hello
+            Scrollable text box
           </ScrollingText>
         </p>
 
@@ -69,7 +74,7 @@ function App() {
 
       <MovableWindow
           isOpen={isAboutOpen}
-          title="About Keplverse Telescope Software"
+          title="About Ninetyfive"
           windowStyle={{
             width: 485,
             height: 485,
@@ -78,7 +83,7 @@ function App() {
           }}
           canClose={true}
           onClose={setIsAboutOpen.bind(this, false)}>
-        YO YO YO
+        <ScrollingText className="m-fill-container">You can drag this window around!</ScrollingText>
       </MovableWindow>
     </div>
   );
