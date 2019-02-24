@@ -2,7 +2,11 @@
 
 React.js components for a faithful Windows 95 aesthetic
 
-![Screenshot of ninetyfive in action](/screenshot.png?raw=true "Screenshot of ninetyfive in action")
+[Live demo](http://steveasleep.com/ninetyfive/)
+
+[![Screenshot of ninetyfive in action](/screenshot.png?raw=true "Screenshot of ninetyfive in action")](http://steveasleep.com/ninetyfive/)
+
+
 
 # Usage
 
