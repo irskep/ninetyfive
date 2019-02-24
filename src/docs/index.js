@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {
   Button,
   Checkbox,
+  Desktop,
   Group,
   List,
   MovableWindow,
@@ -30,7 +31,7 @@ function App() {
   const onTextInputChanged = (e) => onChangeText(e.target.value);
 
   return (
-    <div className="W95__Desktop">
+    <Desktop>
       <StaticWindow
           margin={16}
           style={{maxWidth: '40rem'}}
@@ -97,7 +98,7 @@ function App() {
           onClose={curryOne(setIsAboutOpen, false)}>
         <ScrollingText className="m-fill-container">You can drag this window around!</ScrollingText>
       </MovableWindow>
-    </div>
+    </Desktop>
   );
 }
 

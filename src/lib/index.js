@@ -1,5 +1,6 @@
 import Button from './Button.jsx';
 import Checkbox from './Checkbox.jsx';
+import Desktop from './Desktop.jsx';
 import Group from './Group.jsx';
 import List from './List.jsx';
 import MovableWindow from './MovableWindow.jsx';
@@ -12,6 +13,7 @@ import __ from './ui.scss';
 export {
   Button,
   Checkbox,
+  Desktop,
   Group,
   List,
   MovableWindow,
