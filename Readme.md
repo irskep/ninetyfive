@@ -169,11 +169,11 @@ Simple shorthand for `<button>` with some inner chrome
 **DOM**
 
 ```
-  button.W95__Button {...props}
-    div.W95__ButtonBG
-    div.W95__Button__FocusBG
-    span.W95__Button__Text
-      {props.children}
+button.W95__Button {...props}
+  div.W95__ButtonBG
+  div.W95__Button__FocusBG
+  span.W95__Button__Text
+    {props.children}
 ```
 
 ### Checkbox
@@ -186,13 +186,13 @@ Simple shorthand for `<button>` with some inner chrome
 **DOM**
 
 ```
-  div.W95__Checkbox
-    div.W95__Checkbox__Box
-      div.W95__ControlBG
-        <svg />
-      input[type=checkbox]
-    label
-      {label}
+div.W95__Checkbox
+  div.W95__Checkbox__Box
+    div.W95__ControlBG
+      <svg />
+    input[type=checkbox]
+  label
+    {label}
 ```
 
 ### List
@@ -205,11 +205,11 @@ Simple shorthand for `<button>` with some inner chrome
 **DOM**
 
 ```
-  div.W95__List
-    div.W95__ControlBG
-    div.W95__List__Contents
-      div.W95__List__ListItem[.m-selected]
-        {item}
+div.W95__List
+  div.W95__ControlBG
+  div.W95__List__Contents
+    div.W95__List__ListItem[.m-selected]
+      {item}
 ```
 
 ### TextInput
@@ -221,9 +221,9 @@ Simple shorthand for `<button>` with some inner chrome
 **DOM**
 
 ```
-  div.W95__TextInput
-    div.W95__ControlBG
-    input[type=text]
+div.W95__TextInput
+  div.W95__ControlBG
+  input[type=text]
 ```
 
 ### TinyButton
@@ -239,9 +239,9 @@ Window decoration button
 **DOM**
 
 ```
-  div.W95__TinyButton.{className || ''} style={style}
-    div.W95__ButtonBG
-    {children}
+div.W95__TinyButton.{className || ''} style={style}
+  div.W95__ButtonBG
+  {children}
 ```
 
 ## Utilities
