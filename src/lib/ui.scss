@@ -2,6 +2,10 @@ $titleHeight: 36px;
 $windowPadding: 2px;
 $contentPadding: 12px;
 
+@mixin dotted-border {
+  border: 2px dotted #000;
+}
+
 // Global styles
 .W95__Window, .W95__Desktop {
   &, *, *::before, *::after {
@@ -192,6 +196,10 @@ $contentPadding: 12px;
     max-width: 100%;
     font: inherit;
     font-size: 100%;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -246,15 +254,18 @@ $contentPadding: 12px;
     &:hover {
       padding-left: 2px;
       line-height: 36px;
-      border: 2px dotted #000;
+      @include dotted-border;
     }
 
     &.m-selected {
-      padding-left: 2px;
-      line-height: 36px;
       background-color: var(--blue);
       color: var(--white);
-      border: 2px dotted yellow;
+
+      &:hover {
+        border: 2px dotted yellow;
+        padding-left: 2px;
+        line-height: 36px;
+      }
     }
   }
 }
@@ -315,13 +326,13 @@ $contentPadding: 12px;
 }
 
 .W95__Button {
-  min-width: 44px;
+  min-width: 146px;
   height: 44px;
   line-height: 44px - $windowPadding * 2;
   padding-top: $windowPadding - 2px;
-  padding-right: $windowPadding * 2;
+  padding-right: $windowPadding * 3;
   padding-bottom: $windowPadding;
-  padding-left: $windowPadding * 2;
+  padding-left: $windowPadding * 3;
 
   margin-top: $contentPadding;
   margin-right: $contentPadding;
@@ -336,6 +347,19 @@ $contentPadding: 12px;
 
   &.m-absolute {
     position: absolute;
+  }
+
+  .W95__ButtonFocusBG {
+    display: none;
+  }
+
+  &:focus {
+    .W95__ButtonFocusBG {
+      display: block;
+      position: absolute;
+      top: 4px; right: 4px; bottom: 4px; left: 4px;
+      @include dotted-border;
+    }
   }
 }
 

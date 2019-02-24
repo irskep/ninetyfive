@@ -46,7 +46,7 @@ function App() {
         </div>
 
         <p>
-          <Button>A button</Button>
+          <Button onClick={() => alert("Button clicked")}>A button button button</Button>
         </p>
 
         <p>
