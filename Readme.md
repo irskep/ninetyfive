@@ -234,6 +234,10 @@ Window decoration button
     {children}
 ```
 
+## Utilities
+
+There is a CSS class `W95__HorzFlex` that applies a simple horizontal flexbox layout, which makes it easy to put `Group`s next to each other.
+
 # Visual design guidelines
 
 * All controls are scaled 2x. Pixels got a lot smaller during the last 14 years!
