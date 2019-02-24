@@ -47,10 +47,12 @@ div.W95__Desktop
 
 ### StaticWindow
 
-Fixed-position element (doesn't scroll with page!) with title bar, window decoration, and contents
+Fixed-position element (doesn't scroll with page!) with title bar, window decoration, and contents.
+
+`titleExtra` exists so you can pass `title` as a simple string if you don't need extra window decorations.
 
 **props**
-  - `title`: `string
+  - `title`: `string`
   - `titleExtra`: `React.Node` (Probably one or more `<TinyButton />` elements; need keys!)
   - `margin`: `Number|null` (Margin between outside of window and its container)
   - `style`: `Object|null` (CSS styles for outermost div)
@@ -73,10 +75,7 @@ div.W95__Window.m-static style={style}
 
 Draggable window element. You must provide size via the `style` prop. Built-in close button.
 
-Notes:
-- Use `windowStyle` to set size. The window is initially centered
-  by flexbox, so you don't need to necessarily make it a constant
-  size.
+Use `windowStyle` to set size. The window is initially centered by flexbox, so you don't need to necessarily make it a constant size.
 
 **props**
   - `title`: `string`
@@ -126,8 +125,7 @@ div.W95__Group.{className || ''}
 
 White box with `overflow: auto`. There is probably a more accurate name for this component.
 
-Notes:
-- You need to set a height yourself or use `className="m-fill-container"`.
+You need to set a height yourself or use `className="m-fill-container"`.
 
 **props**
   - `style`: `Object|null`
