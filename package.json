@@ -1,6 +1,6 @@
 {
   "name": "ninetyfive",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "React.js components for a faithful Windows 95 aesthetic",
   "main": "dist/lib/index.js",
   "repository": "https://github.com/irskep/ninetyfive",
