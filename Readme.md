@@ -1,6 +1,6 @@
-# ninetyfive
+# ninetyfive: React.js components for a faithful Windows 95 aesthetic
 
-React.js components for a faithful Windows 95 aesthetic
+GitHub issues are disabled, but pull requests are enthusiastically accepted. :-)
 
 [Live demo](http://steveasleep.com/ninetyfive/)
 
