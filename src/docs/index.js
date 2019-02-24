@@ -35,7 +35,7 @@ function App() {
       <StaticWindow
           margin={16}
           style={{maxWidth: '40rem'}}
-          title="Ninetyfive UI Library"
+          title="Ninetyfive UI component demos"
           titleExtra={(
             <TinyButton key="button" onClick={curryOne(setIsAboutOpen, true)}>?</TinyButton>
           )}>
