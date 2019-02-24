@@ -4,6 +4,12 @@ $contentPadding: 12px;
 
 // Global styles
 .W95__Window {
+  &, *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  font-family: Arial, Helvetica, sans-serif;
+
   p {
     margin: $contentPadding 0;
   }
@@ -130,6 +136,11 @@ $contentPadding: 12px;
     top: -0.7em;
     left: $contentPadding - $windowPadding * 2;
     padding: 0 $windowPadding * 2;
+
+    max-width: calc(100% - 16px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .W95__GroupContents {
@@ -170,6 +181,8 @@ $contentPadding: 12px;
     padding: 0 6px;
     border: none;
     max-width: 100%;
+    font: inherit;
+    font-size: 100%;
   }
 }
 
@@ -339,8 +352,11 @@ $contentPadding: 12px;
   }
 
   .W95__ScrollingText__Content {
-    position: absolute;
-    top: 2px; right: 2px; bottom: 2px; left: 2px;
+
+    &.m-fill-container {
+      position: absolute;
+      top: 2px; right: 2px; bottom: 2px; left: 2px;
+    }
     padding: $windowPadding * 2;
     overflow: scroll;
 
