@@ -40,13 +40,13 @@ function App() {
             </p>
 
             <p>
-              Don't forget to press the "?" button!
+              Press the "?" button for a demo of movable windows.
             </p>
           </Group>
         </div>
 
         <p>
-          <Button onClick={() => alert("Button clicked")}>A button button button</Button>
+          <Button onClick={() => alert("Button clicked")}>A button</Button>
         </p>
 
         <p>
@@ -61,8 +61,13 @@ function App() {
         </p>
 
         <p>
-          <ScrollingText>
-            Scrollable text box
+          <ScrollingText style={{height: 84}}>
+            Scrollable text box<br />
+            Scrollable text box<br />
+            Scrollable text box<br />
+            Scrollable text box<br />
+            Scrollable text box<br />
+            Scrollable text box<br />
           </ScrollingText>
         </p>
 
