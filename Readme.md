@@ -1,3 +1,9 @@
+# ninetyfive
+
+React.js components for a faithful Windows 95 aesthetic
+
+![Screenshot of ninetyfive in action](/screenshot.png?raw=true "Screenshot of ninetyfive in action")
+
 # Usage
 
 `npm install` / `yarn add` the `ninetyfive` package.
@@ -252,5 +258,6 @@ There is a CSS class `W95__HorzFlex` that applies a simple horizontal flexbox la
 * For other elements inside a React component, use the naming scheme `W95__ReactComponentName__SemanticSubcomponentName`.
   * The exceptions to this rule are classes that may be used in more than one component, like `W95__WindowTitle`.
 * If a class is used to modify the appearance of an element, rather than providing its base styles, it must use the form `m-foo-bar`. For example, you could end up with `W95__List__ListItem m-selected`.
-* Colors must be defined in CSS variables.
+* Colors must be defined in CSS variables in `general.scss`.
 * Do not nest CSS rules unless the nesting is functionally necessary.
+* Roughly one SCSS file per component, with an identical name and `.scss` suffix.

@@ -39,21 +39,6 @@ function App() {
           titleExtra={(
             <TinyButton key="button" onClick={curryOne(setIsAboutOpen, true)}>?</TinyButton>
           )}>
-        <div className="W95__HorzFlex" key="top">
-          <Group title="What is this?">
-            <p>
-              Ninetyfive is a collection of React.js components that make a web page look like a Windows 95 program.
-            </p>
-
-            <p>
-              Press the "?" button for a demo of movable windows.
-            </p>
-
-            <p>
-              <a href="https://github.com/irskep/ninetyfive">Docs may be found here.</a>
-            </p>
-          </Group>
-        </div>
 
         <Section>
           <Button onClick={() => alert("Button clicked")}>A button</Button>
@@ -87,6 +72,12 @@ function App() {
             selectedItemIndex={selectedItemIndex}
             onSelect={oneArg(onSelect)} />
         </Section>
+
+        <Group title="What is this?">
+          <p>Ninetyfive is a collection of React.js components that make a web page look like a Windows 95 program.</p>
+          <p>Press the "?" button for a demo of movable windows.</p>
+          <p><a href="https://github.com/irskep/ninetyfive">Docs may be found here.</a></p>
+        </Group>
       </StaticWindow>
 
       <MovableWindow
