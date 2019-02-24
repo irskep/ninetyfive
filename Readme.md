@@ -29,13 +29,16 @@ Low hanging fruit that you can help fix:
 
 ## Containers
 
+### Desktop
+
+Simple plain blue background with default desktop color
+
+**props**
+  - `children`: `React.Node`
+
+**DOM**
+
 ```
-Desktop         // Simple plain blue background with default desktop color
-
-props:
-  children: React.Node
-
-DOM:
   div.W95__Desktop
     {children}
 ```
