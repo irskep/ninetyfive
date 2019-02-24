@@ -4,6 +4,8 @@ GitHub issues are disabled, but pull requests are enthusiastically accepted. :-)
 
 [Live demo](http://steveasleep.com/ninetyfive/)
 
+[Cooler live demo](http://steveasleep.com/keplverse/) - browse imaginary star systems using your "telescope software"
+
 [![Screenshot of ninetyfive in action](/screenshot.png?raw=true "Screenshot of ninetyfive in action")](http://steveasleep.com/ninetyfive/)
 
 
