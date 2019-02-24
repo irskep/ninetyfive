@@ -11,12 +11,12 @@
     position: absolute;
     top: 2px; right: 2px; bottom: 2px; left: 2px;
   }
+}
 
-  .W95__ScrollingText__Content {
-    padding: $windowPadding * 2;
-    overflow: scroll;
-    max-height: 100%;
+.W95__ScrollingText__Content {
+  padding: $windowPadding * 2;
+  overflow: scroll;
+  max-height: 100%;
 
-    font-family: 'Times New Roman', Times, serif;
-  }
+  font-family: 'Times New Roman', Times, serif;
 }

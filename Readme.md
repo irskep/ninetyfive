@@ -114,10 +114,10 @@ Draws a thin line around its content and adds a title in the upper left.
 
 ```
 div.W95__Group.{className || ''}
-  div.W95__GroupBG
-  div.W95__GroupTitle
+  div.W95__Group__BG
+  div.W95__Group__Title
     {title}
-  div.W95__GroupContents
+  div.W95__Group__Contents
     {children}
 ```
 
@@ -161,7 +161,7 @@ Simple shorthand for `<button>` with some inner chrome
 ```
   button.W95__Button {...props}
     div.W95__ButtonBG
-    div.W95__ButtonFocusBG
+    div.W95__Button__FocusBG
     span.W95__Button__Text
       {props.children}
 ```
@@ -198,7 +198,7 @@ Simple shorthand for `<button>` with some inner chrome
   div.W95__List
     div.W95__ControlBG
     div.W95__List__Contents
-      div.W95__ListItem[.m-selected]
+      div.W95__List__ListItem[.m-selected]
         {item}
 ```
 
@@ -244,8 +244,9 @@ Window decoration button
 # Code guidelines
 
 * All classes must be prefixed with `W95__` or `m-`.
-* All React component top-level elements must have a class name of the form `W95__ClassName`.
-* For other elements inside a React component, use the naming scheme `W95__ClassName__SemanticSubcomponentName`.
-* If a class is used to modify the appearance of an element, rather than providing its base styles, it must be of the form `m-foo-bar`.
+* All React component top-level elements must have a CSS class name of the form `W95__ReactComponentName`.
+* For other elements inside a React component, use the naming scheme `W95__ReactComponentName__SemanticSubcomponentName`.
+  * The exceptions to this rule are classes that may be used in more than one component, like `W95__WindowTitle`.
+* If a class is used to modify the appearance of an element, rather than providing its base styles, it must use the form `m-foo-bar`. For example, you could end up with `W95__List__ListItem m-selected`.
 * Colors must be defined in CSS variables.
 * Do not nest CSS rules unless the nesting is functionally necessary.

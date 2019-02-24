@@ -8,7 +8,7 @@ export default function List({items, selectedItemIndex, onSelect}) {
         {items.map((item, i) => (
           <div
               onClick={onSelect.bind(this, i)}
-              className={`W95__ListItem ${i === selectedItemIndex ? 'm-selected' : ''}`}
+              className={`W95__List__ListItem ${i === selectedItemIndex ? 'm-selected' : ''}`}
               key={i}>
             {item}
           </div>

@@ -7,7 +7,7 @@ export default function Button(props) {
   return (
     <button className="W95__Button" {...props}>
       <div className="W95__ButtonBG" />
-      <div className="W95__ButtonFocusBG" />
+      <div className="W95__Button__FocusBG" />
       <span className="W95__Button__Text">{children}</span>
     </button>
   );

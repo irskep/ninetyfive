@@ -26,12 +26,12 @@
     position: absolute;
   }
 
-  .W95__ButtonFocusBG {
+  .W95__Button__FocusBG {
     display: none;
   }
 
   &:focus {
-    .W95__ButtonFocusBG {
+    .W95__Button__FocusBG {
       display: block;
       position: absolute;
       top: 4px; right: 4px; bottom: 4px; left: 4px;
