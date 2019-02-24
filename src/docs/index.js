@@ -48,6 +48,10 @@ function App() {
             <p>
               Press the "?" button for a demo of movable windows.
             </p>
+
+            <p>
+              <a href="https://github.com/irskep/ninetyfive">Docs may be found here.</a>
+            </p>
           </Group>
         </div>
 

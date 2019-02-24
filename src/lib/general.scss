@@ -16,12 +16,16 @@
 
   --bg: #c0c0c0;
   --fg: #000;
-  --blue: #000082;
+  --blue: #0414a7;
   --white: #fff;
   --clickable: #040080;
   --desktop: #59aaa9;
 
   font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, Helvetica, sans-serif;
+
+  a {
+    color: var(--blue);
+  }
 
   p {
     margin: $contentPadding 0;

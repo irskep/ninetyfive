@@ -6,6 +6,7 @@ $contentPadding: 12px;
   border: 2px dotted #000;
 }
 
+// Checkbox, List, ScrollingText, TextInput
 @mixin BorderedControl {
   position: relative;
   background-color: white;
@@ -14,21 +15,22 @@ $contentPadding: 12px;
   border-left: 2px solid #878a8e;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
-
-  .W95__ControlBG {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    border-right: 2px solid #c4c7cb;
-    border-bottom: 2px solid #c4c7cb;
-  }
 }
 
+.W95__ControlBG {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #c4c7cb;
+  border-bottom: 2px solid #c4c7cb;
+}
+
+// Button, TinyButton
 @mixin ButtonLike {
   // resets
   background-color: var(--bg);
@@ -45,20 +47,6 @@ $contentPadding: 12px;
   border-left: 2px solid #fff;
   border-right: 2px solid #000;
   border-bottom: 2px solid #000;
-
-  .W95__ButtonBG {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-right: 2px solid #878a8e;
-    border-bottom: 2px solid #878a8e;
-  }
-
-  .W95__Button__Text {
-    display: inline-block;
-  }
 
   &:focus {
     outline: 0;
@@ -81,4 +69,18 @@ $contentPadding: 12px;
       border-bottom: 2px solid #878a8e;
     }
   }
+}
+
+.W95__ButtonBG {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 2px solid #878a8e;
+  border-bottom: 2px solid #878a8e;
+}
+
+.W95__Button__Text {
+  display: inline-block;
 }

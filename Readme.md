@@ -233,3 +233,19 @@ Window decoration button
     div.W95__ButtonBG
     {children}
 ```
+
+# Visual design guidelines
+
+* All controls are scaled 2x. Pixels got a lot smaller during the last 14 years!
+* All assets are SVGs.
+* No copyrighted assets.
+* Fonts are hard, don't worry too much about them.
+
+# Code guidelines
+
+* All classes must be prefixed with `W95__` or `m-`.
+* All React component top-level elements must have a class name of the form `W95__ClassName`.
+* For other elements inside a React component, use the naming scheme `W95__ClassName__SemanticSubcomponentName`.
+* If a class is used to modify the appearance of an element, rather than providing its base styles, it must be of the form `m-foo-bar`.
+* Colors must be defined in CSS variables.
+* Do not nest CSS rules unless the nesting is functionally necessary.

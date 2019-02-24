@@ -8,7 +8,7 @@ import ScrollingText from './ScrollingText.jsx';
 import StaticWindow from './StaticWindow.jsx';
 import TextInput from './TextInput.jsx';
 import TinyButton from './TinyButton.jsx';
-import __ from './ui.scss';
+import __ from './general.scss';
 
 export {
   Button,
