@@ -11,7 +11,7 @@
   "scripts": {
     "start": "npx parcel src/docs/index.html",
     "build": "npx webpack --mode=production",
-    "build:docs": "parcel build --detailed-report src/docs/index.html -d ./docs"
+    "build:docs": "parcel build --detailed-report --public-url . src/docs/index.html -d ./docs"
   },
   "files": [
     "dist/index.js",
