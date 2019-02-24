@@ -1,5 +1,5 @@
 import React from 'react';
-import TinyButton from './TinyButton';
+import TinyButton from './TinyButton.jsx';
 
 function doublePoints(points) {
   points.forEach((p, i) => {
