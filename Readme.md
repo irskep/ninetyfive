@@ -267,3 +267,4 @@ There is a CSS class `W95__HorzFlex` that applies a simple horizontal flexbox la
 * Colors must be defined in CSS variables in `general.scss`.
 * Do not nest CSS rules unless the nesting is functionally necessary.
 * Roughly one SCSS file per component, with an identical name and `.scss` suffix.
+* Do not break accessibility by using `<div>`s for everything.
