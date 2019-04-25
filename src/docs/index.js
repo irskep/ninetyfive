@@ -9,6 +9,8 @@ import {
   MovableWindow,
   ScrollingText,
   StaticWindow,
+  Tab,
+  Tabs,
   TextInput,
   TinyButton,
 } from '../lib';
@@ -73,11 +75,26 @@ function App() {
             onSelect={oneArg(onSelect)} />
         </Section>
 
+        <Section>
+          <Tabs selected="Tab Three">
+            <Tab label="Tab One">
+              <p>Tab one content.</p>
+            </Tab>
+            <Tab label="Tab Two">
+              <p>Tab two content.</p>
+            </Tab>
+            <Tab label="Tab Three">
+              <p>Tab three content.</p>
+            </Tab>
+          </Tabs>
+        </Section>
+
         <Group title="What is this?">
           <p>Ninetyfive is a collection of React.js components that make a web page look like a Windows 95 program.</p>
           <p>Press the "?" button for a demo of movable windows.</p>
           <p><a href="https://github.com/irskep/ninetyfive">Docs may be found here.</a></p>
         </Group>
+
       </StaticWindow>
 
       <MovableWindow
