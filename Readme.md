@@ -133,7 +133,7 @@ div.W95__Group.{className || ''}
     {children}
 ```
 
-### ScrollingText 
+### ScrollingText
 
 White box with `overflow: auto`. There is probably a more accurate name for this component.
 
@@ -151,6 +151,34 @@ div.W95__ScrollingText.{className || ''} style={style}
   div.W95__ControlBG
   div.W95__ScrollingText__Content
     {children}
+```
+
+### Tabs
+
+Tabs define multiple logical sections of information within the same group. One tab is selected at a time; the others are hidden.
+
+Tabs are composed from two components: `Tabs` for the parent wrapping group and `Tab` for each selectable section of child content.
+
+**`Tabs` props**
+  - `selected`: `string|null` (The label of the child tab to select)
+  - `className`: `string|null`
+  - `children`: `ninetyfive.Tab`
+
+**`Tab` props**
+  - `label`: `string` (The clickable label identifying the tab)
+  - `className`: `string|null`
+  - `children`: `React.Node`
+
+**DOM**
+
+```
+div.W95__Tabs.{className || ''}
+  ul.W95__Tabs__Labels
+    li.W95__Tabs__Label
+      button.W95__Tabs__Button
+  div.W95__Tabs__Content
+    div.W95__Tab.{className || ''}
+      {children}
 ```
 
 ## Controls
