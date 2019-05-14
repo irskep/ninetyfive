@@ -15,7 +15,7 @@
 
 .W95__ScrollingText__Content {
   padding: $windowPadding * 2;
-  overflow: scroll;
+  overflow-y: scroll;
   max-height: 100%;
 
   font-family: 'Times New Roman', Times, serif;
